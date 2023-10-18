@@ -12,7 +12,7 @@ network WirelessA1
         @figure[title](type=label; pos=0,-1; anchor=sw; color=darkblue);
 
         @figure[rcvdPkText](type=indicatorText; pos=380,20; anchor=w; font=,18; textFormat="packets received: %g"; initialValue=0);
-        @statistic[packetReceived](source=hostB.app[0].packetReceived; record=figure(count); targetFigure=rcvdPkText);
+        @statistic[packetReceived](source=hostR1.app[0].packetReceived; record=figure(count); targetFigure=rcvdPkText);
 
     submodules:
         visualizer: <default(firstAvailableOrEmpty("IntegratedCanvasVisualizer"))> like IIntegratedVisualizer if typename != "" {
@@ -31,7 +31,7 @@ network WirelessA1
             @display("p=419.328,404.208");
         }
         hostC: <default("WirelessHost")> like INetworkNode {
-            @display("p=476.78403,292.32");
+            @display("p=396.144,278.208");
         }
         hostD: <default("WirelessHost")> like INetworkNode {
             @display("p=458.64,58.464");

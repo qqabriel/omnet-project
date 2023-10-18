@@ -9,4 +9,6 @@ void StandardHost::handleMessage(cMessage *msg)
         // Send the packet
         send(packet, "out");
     }
+    EV << "Debug Message" << endl;
 }
+
